@@ -1,12 +1,12 @@
-package de.spexmc.mc.template.listener;
+package de.spexmc.mc.terroristtown.listener;
 
-import de.spexmc.mc.template.util.mcutils.PlayerScoreboard;
+import de.spexmc.mc.terroristtown.util.mcutils.PlayerScoreboard;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 /**
- * Created by Lara on 26.02.2019 for template
+ * Created by Lara on 26.02.2019 for terroristtown
  */
 public class TestEvent implements Listener {
 

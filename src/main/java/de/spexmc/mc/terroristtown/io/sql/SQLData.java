@@ -1,11 +1,11 @@
-package de.spexmc.mc.template.io.sql;
+package de.spexmc.mc.terroristtown.io.sql;
 
 import java.sql.Connection;
 
-import de.spexmc.mc.template.storage.Data;
+import de.spexmc.mc.terroristtown.storage.Data;
 
 /**
- * Created by Lara on 13.01.2019 for template
+ * Created by Lara on 13.01.2019 for terroristtown
  */
 class SQLData {
   private final String password, url, username;

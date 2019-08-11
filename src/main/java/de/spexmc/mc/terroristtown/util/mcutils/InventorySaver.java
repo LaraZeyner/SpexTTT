@@ -1,4 +1,4 @@
-package de.spexmc.mc.template.util.mcutils;
+package de.spexmc.mc.terroristtown.util.mcutils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -12,7 +12,7 @@ import org.bukkit.util.io.BukkitObjectOutputStream;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
 /**
- * Created by Lara on 01.06.2019 for template
+ * Created by Lara on 01.06.2019 for terroristtown
  */
 public final class InventorySaver {
   public static String toBase64(Inventory inventory) {

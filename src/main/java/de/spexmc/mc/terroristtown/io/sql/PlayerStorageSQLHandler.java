@@ -1,4 +1,4 @@
-package de.spexmc.mc.template.io.sql;
+package de.spexmc.mc.terroristtown.io.sql;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import de.spexmc.mc.template.storage.Const;
-import de.spexmc.mc.template.storage.Data;
+import de.spexmc.mc.terroristtown.storage.Const;
+import de.spexmc.mc.terroristtown.storage.Data;
 
 /**
- * Created by Lara on 26.02.2019 for template
+ * Created by Lara on 26.02.2019 for terroristtown
  */
 public class PlayerStorageSQLHandler extends SQLConnector {
 

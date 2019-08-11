@@ -1,4 +1,4 @@
-package de.spexmc.mc.template.util.mcutils;
+package de.spexmc.mc.terroristtown.util.mcutils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -6,16 +6,16 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.UUID;
 
-import de.spexmc.mc.template.io.IOUtils;
-import de.spexmc.mc.template.storage.Messages;
-import de.spexmc.mc.template.util.Messenger;
+import de.spexmc.mc.terroristtown.io.IOUtils;
+import de.spexmc.mc.terroristtown.storage.Messages;
+import de.spexmc.mc.terroristtown.util.Messenger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
 
 /**
- * Created by Lara on 31.05.2019 for template
+ * Created by Lara on 31.05.2019 for terroristtown
  */
 final class NameFetcher {
   /**

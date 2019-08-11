@@ -1,4 +1,4 @@
-package de.spexmc.mc.template.util.mcutils;
+package de.spexmc.mc.terroristtown.util.mcutils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -8,7 +8,7 @@ import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
 
 /**
- * Created by Lara on 28.05.2019 for template
+ * Created by Lara on 28.05.2019 for terroristtown
  */
 public class PlayerScoreboard {
   private final Player player;
@@ -66,7 +66,7 @@ public class PlayerScoreboard {
   private void createScoreboard() {
     final Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
     final Objective objective = scoreboard.registerNewObjective("objective", "criteria");
-    objective.setDisplayName("§5     Template     ");
+    objective.setDisplayName("§5     TerroristTown     ");
     objective.setDisplaySlot(DisplaySlot.SIDEBAR);
     player.setScoreboard(scoreboard);
     evaluateScoreboardContent();

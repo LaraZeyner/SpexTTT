@@ -1,13 +1,13 @@
-package de.spexmc.mc.template.storage;
+package de.spexmc.mc.terroristtown.storage;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import de.spexmc.mc.template.io.sql.SQLManager;
+import de.spexmc.mc.terroristtown.io.sql.SQLManager;
 
 /**
- * Created by Lara on 26.02.2019 for template
+ * Created by Lara on 26.02.2019 for terroristtown
  */
 public final class Data {
   private static Data instance;

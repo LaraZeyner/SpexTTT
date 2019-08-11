@@ -1,4 +1,4 @@
-package de.spexmc.mc.template.io.sql;
+package de.spexmc.mc.terroristtown.io.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,14 +9,14 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import de.spexmc.mc.template.Template;
-import de.spexmc.mc.template.io.FileManager;
-import de.spexmc.mc.template.storage.Const;
-import de.spexmc.mc.template.storage.Data;
-import de.spexmc.mc.template.storage.Messages;
+import de.spexmc.mc.terroristtown.TerroristTown;
+import de.spexmc.mc.terroristtown.io.FileManager;
+import de.spexmc.mc.terroristtown.storage.Const;
+import de.spexmc.mc.terroristtown.storage.Data;
+import de.spexmc.mc.terroristtown.storage.Messages;
 
 /**
- * Created by Lara on 20.07.2019 for template
+ * Created by Lara on 20.07.2019 for terroristtown
  */
 public class SQLConnector {
   private final Logger logger = Logger.getLogger(getClass().getName());
@@ -40,26 +40,26 @@ public class SQLConnector {
     } catch (ClassNotFoundException | SQLException ex) {
       getLogger().log(Level.SEVERE, Messages.MYSQL_CONNECTION_FAILED, ex);
       Data.setForceDisable(true);
-      Template.getInstance().onDisable();
+      TerroristTown.getInstance().onDisable();
     }
     return connection;
   }
 
   void init(Connection connection) {
     if (connection != null) {
-      try (final PreparedStatement stmt = connection.prepareStatement("CREATE TABLE IF NOT EXISTS Template" +
+      try (final PreparedStatement stmt = connection.prepareStatement("CREATE TABLE IF NOT EXISTS TerroristTown" +
           "(Spalte1 VARCHAR(8))")) {
         stmt.executeUpdate();
 
       } catch (SQLException ex) {
         logger.log(Level.SEVERE, Messages.MYSQL_CONNECTION_FAILED, ex);
         Data.setForceDisable(true);
-        Template.getInstance().onDisable();
+        TerroristTown.getInstance().onDisable();
       }
     } else {
       getLogger().log(Level.SEVERE, Messages.MYSQL_CONNECTION_FAILED);
       Data.setForceDisable(true);
-      Template.getInstance().onDisable();
+      TerroristTown.getInstance().onDisable();
     }
   }
 
@@ -78,7 +78,7 @@ public class SQLConnector {
 
     } catch (final SQLException ex) {
       getLogger().log(Level.SEVERE, Messages.MYSQL_CONNECTION_FAILED, ex);
-      Template.getInstance().onDisable();
+      TerroristTown.getInstance().onDisable();
     }
   }
 

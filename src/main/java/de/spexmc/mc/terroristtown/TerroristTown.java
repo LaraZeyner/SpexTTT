@@ -1,23 +1,23 @@
-package de.spexmc.mc.template;
+package de.spexmc.mc.terroristtown;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import de.spexmc.mc.template.io.sql.SQLManager;
-import de.spexmc.mc.template.storage.Data;
-import de.spexmc.mc.template.storage.Messages;
-import de.spexmc.mc.template.util.Registerer;
+import de.spexmc.mc.terroristtown.io.sql.SQLManager;
+import de.spexmc.mc.terroristtown.storage.Data;
+import de.spexmc.mc.terroristtown.storage.Messages;
+import de.spexmc.mc.terroristtown.util.Registerer;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- * Created by Lara on 26.02.2019 for template
- * Replace all template and Template of Classnames, Variablenames, Packagenames, etc with your projectname
+ * Created by Lara on 26.02.2019 for terroristtown
+ * Replace all terroristtown and TerroristTown of Classnames, Variablenames, Packagenames, etc with your projectname
  */
-public class Template extends JavaPlugin {
-  private static Template instance;
+public class TerroristTown extends JavaPlugin {
+  private static TerroristTown instance;
   private final Logger logger = Logger.getLogger(getClass().getName());
 
-  public static Template getInstance() {
+  public static TerroristTown getInstance() {
     return instance;
   }
 

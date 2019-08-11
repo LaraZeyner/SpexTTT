@@ -1,15 +1,15 @@
-package de.spexmc.mc.template.util.mcutils;
+package de.spexmc.mc.terroristtown.util.mcutils;
 
 import java.util.Map;
 import java.util.UUID;
 
-import de.spexmc.mc.template.storage.Data;
+import de.spexmc.mc.terroristtown.storage.Data;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 /**
- * Created by Lara on 28.05.2019 for template
+ * Created by Lara on 28.05.2019 for terroristtown
  *
  * Verbesserter UUIDFetcher - angepasst auf MySQL-Speicher der jemals
  * verbundenen Spieler. Wenn sich ein Spieler auf dem Server einloggt, wird die
