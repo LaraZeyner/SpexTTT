@@ -13,7 +13,7 @@ import de.spexmc.mc.terroristtown.storage.Data;
 /**
  * Created by Lara on 26.02.2019 for terroristtown
  */
-public class PlayerStorageSQLHandler extends SQLConnector {
+public class PlayerStorageSQLHandler extends TTTPlayerStorageSQLHandler {
 
   public Map<UUID, String> getPlayers() {
     final SQLManager sqlManager = Data.getInstance().getSql();

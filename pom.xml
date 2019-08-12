@@ -18,7 +18,7 @@
 
     <properties>
         <author>SpexMC-Entwicklerteam</author> <!-- Change for Autor -->
-        <mainClass>de.spexmc.mc.terroristtown.Template</mainClass> <!-- Change for Main Class -->
+        <mainClass>de.spexmc.mc.terroristtown.TerroristTown</mainClass> <!-- Change for Main Class -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -135,21 +135,14 @@
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+
         <dependency>
-            <groupId>org.javassist</groupId>
-            <artifactId>javassist</artifactId>
-            <version>3.25.0-GA</version>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.10</version>
+            <scope>compile</scope>
         </dependency>
 
-        <!--
-                <dependency>
-                    <groupId>org.reflections</groupId>
-                    <artifactId>reflections</artifactId>
-                    <version>0.9.10</version>
-                    <scope>compile</scope>
-                </dependency>
-        -->
     </dependencies>
 
 

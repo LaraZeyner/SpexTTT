@@ -1,14 +1,9 @@
 package de.spexmc.mc.terroristtown.util;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
 
 import de.spexmc.mc.terroristtown.TerroristTown;
-import de.spexmc.mc.terroristtown.commands.TestCommand;
-import de.spexmc.mc.terroristtown.listener.TestEvent;
 import de.spexmc.mc.terroristtown.storage.Const;
 import de.spexmc.mc.terroristtown.storage.Data;
 import de.spexmc.mc.terroristtown.storage.Messages;

@@ -35,10 +35,12 @@ public final class Data {
 
   private final Map<UUID, String> cache;
   private final SQLManager sql;
+  private final TTTInfo tttInfo;
 
   private Data() {
     this.cache = new HashMap<>();
     this.sql = new SQLManager();
+    this.tttInfo = new TTTInfo();
     forceDisable = false;
   }
 
@@ -50,5 +52,10 @@ public final class Data {
   public SQLManager getSql() {
     return sql;
   }
+
+  public TTTInfo getTTTInfo() {
+    return tttInfo;
+  }
+
   //</editor-fold>
 }

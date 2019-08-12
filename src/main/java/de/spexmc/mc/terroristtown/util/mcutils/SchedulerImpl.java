@@ -1,57 +1,58 @@
 package de.spexmc.mc.terroristtown.util.mcutils;
 
 import de.spexmc.mc.terroristtown.TerroristTown;
+import de.spexmc.mc.terroristtown.model.TTTPlayer;
 import org.bukkit.Bukkit;
 
 /**
  * Created by Lara on 30.07.2019 for terroristtown
  */
-abstract class SchedulerImpl {
-  private final Object reference;
+public abstract class SchedulerImpl {
+  private final TTTPlayer tttPlayer;
   private int counter, id;
 
-  SchedulerImpl(Object reference) {
+  public SchedulerImpl(TTTPlayer tttPlayer) {
     this.counter = 0;
     this.id = 0;
-    this.reference = reference;
+    this.tttPlayer = tttPlayer;
   }
 
   public abstract void invoke();
 
-  void increment(int amount) {
+  public void increment(int amount) {
     counter += amount;
   }
 
-  void increment() {
+  public void increment() {
     increment(1);
   }
 
-  void decrement(int amount) {
+  public void decrement(int amount) {
     increment(-amount);
   }
 
-  void decrement() {
+  public void decrement() {
     increment(-1);
   }
 
-  int getCounter() {
+  public int getCounter() {
     return counter;
   }
 
-  void setCounter(int counter) {
+  public void setCounter(int counter) {
     this.counter = counter;
   }
 
-  Object getReference() {
-    return reference;
+  public TTTPlayer getTTTPlayer() {
+    return tttPlayer;
   }
 
-  void schedule(int startCounter, Runnable runnable) {
+  public void schedule(int startCounter, Runnable runnable) {
     this.counter = startCounter;
     this.id = Bukkit.getScheduler().scheduleSyncRepeatingTask(TerroristTown.getInstance(), runnable, 20L, 20L);
   }
 
-  void cancel() {
+  public void cancel() {
     Bukkit.getScheduler().cancelTask(id);
   }
 }
