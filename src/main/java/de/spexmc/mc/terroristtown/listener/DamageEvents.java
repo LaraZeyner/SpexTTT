@@ -18,6 +18,11 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 
 /**
  * Created by Lara on 11.08.2019 for SpexTTT
+ *
+ * @see org.bukkit.event.entity.EntityDamageByEntityEvent
+ * @see org.bukkit.event.entity.EntityDamageEvent
+ * @see org.bukkit.event.entity.PlayerDeathEvent
+ * @see org.bukkit.event.player.PlayerRespawnEvent
  */
 public class DamageEvents implements Listener {
   @EventHandler
@@ -25,7 +30,6 @@ public class DamageEvents implements Listener {
     if (deathEvent.getEntity() != null) {
       deathEvent.getDrops().clear();
       respawn(deathEvent);
-
     }
 
     if (EndChecker.isEnd()) {
@@ -47,6 +51,24 @@ public class DamageEvents implements Listener {
         });
       }
     };
+  }
+
+  @EventHandler
+  public void onPvP(EntityDamageByEntityEvent damageByEntityEvent) {
+    if (damageByEntityEvent.getDamager() instanceof Player &&
+        damageByEntityEvent.getEntity() instanceof Player) {
+      DamageManager.onPlayerDamage(damageByEntityEvent);
+    }
+  }
+
+  @EventHandler
+  public void onSpecPvP(EntityDamageByEntityEvent damageByEntityEvent) {
+    if (damageByEntityEvent.getDamager() instanceof Player) {
+      final Player player = (Player) damageByEntityEvent.getDamager();
+      if (TTTPlayer.determine(player).isSpectator()) {
+        DamageManager.onSpecatatorDamage(damageByEntityEvent);
+      }
+    }
   }
 
   @EventHandler
@@ -80,7 +102,8 @@ public class DamageEvents implements Listener {
 
   @EventHandler
   public void onDamage(EntityDamageEvent damageEvent) {
-    if (damageEvent.getEntity() instanceof Player && !Data.getInstance().getTTTInfo().isStarted()) {
+    if (damageEvent.getEntity() instanceof Player && !Data.getInstance().getTTTInfo().isStarted() ||
+        TTTPlayer.determine((Player) damageEvent.getEntity()).isSpectator()) {
       damageEvent.setCancelled(true);
     }
   }

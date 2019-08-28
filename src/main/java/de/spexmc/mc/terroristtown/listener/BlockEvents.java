@@ -12,6 +12,9 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 
 /**
  * Created by Lara on 11.08.2019 for SpexTTT
+ * @see org.bukkit.event.block.BlockBreakEvent
+ * @see org.bukkit.event.block.BlockPlaceEvent
+ * @see org.bukkit.event.entity.EntityExplodeEvent
  */
 public class BlockEvents implements Listener {
   @EventHandler

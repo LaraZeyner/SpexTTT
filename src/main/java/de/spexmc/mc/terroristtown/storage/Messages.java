@@ -13,6 +13,8 @@ public final class Messages {
   public static final String SUCCESSFULLY_DISABLED = "TerroristTown wurde erfolgreich heruntergefahren.";
   public static final String SUCCESSFULLY_ENABLED = "TerroristTown wurde erfolgreich gestartet.";
 
+  public static final String TESTER_DISABLED = "§4 DER TESTER WURDE DEAKTIVIERT!!!";
+
   // General
   public static final String PREFIX = "TerroristTown | ";
 }

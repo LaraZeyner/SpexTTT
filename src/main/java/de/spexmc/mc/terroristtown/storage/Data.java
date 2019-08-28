@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import de.spexmc.mc.terroristtown.io.sql.SQLManager;
+import de.spexmc.mc.terroristtown.model.Tester;
 
 /**
  * Created by Lara on 26.02.2019 for terroristtown
@@ -35,11 +36,13 @@ public final class Data {
 
   private final Map<UUID, String> cache;
   private final SQLManager sql;
+  private final Tester tester;
   private final TTTInfo tttInfo;
 
   private Data() {
     this.cache = new HashMap<>();
     this.sql = new SQLManager();
+    this.tester = new Tester();
     this.tttInfo = new TTTInfo();
     forceDisable = false;
   }
@@ -51,6 +54,10 @@ public final class Data {
 
   public SQLManager getSql() {
     return sql;
+  }
+
+  public Tester getTester() {
+    return tester;
   }
 
   public TTTInfo getTTTInfo() {

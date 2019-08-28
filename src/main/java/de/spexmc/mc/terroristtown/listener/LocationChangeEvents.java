@@ -8,6 +8,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 
 /**
  * Created by Lara on 11.08.2019 for SpexTTT
+ * @see org.bukkit.event.player.PlayerTeleportEvent
  */
 public class LocationChangeEvents implements Listener {
   @EventHandler

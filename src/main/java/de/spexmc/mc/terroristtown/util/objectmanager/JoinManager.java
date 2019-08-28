@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
  * Created by Lara on 11.08.2019 for SpexTTT
  */
 public class JoinManager {
-  private TTTPlayer joiner;
+  private final TTTPlayer joiner;
 
   public JoinManager(Player joiner) {
     this.joiner = TTTPlayer.determine(joiner);

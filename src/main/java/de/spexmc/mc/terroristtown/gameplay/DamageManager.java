@@ -15,14 +15,28 @@ public final class DamageManager {
       final Arrow arrow = (Arrow) damageByEntityEvent.getDamager();
       if (arrow.getShooter() instanceof Player) {
         final Player arrowShooter = (Player) arrow.getShooter();
-        final TTTPlayer arrowShooterTTTPlayer = TTTPlayer.determine(arrowShooter);
-        final Player target = (Player) damageByEntityEvent.getEntity();
-        final TTTPlayer targetTTTPlayer = TTTPlayer.determine(target);
-
-        if (arrowShooterTTTPlayer.getRole().equals(targetTTTPlayer.getRole())) {
-          damageByEntityEvent.setCancelled(true);
-        }
+        onDamage(damageByEntityEvent, arrowShooter);
       }
     }
+  }
+
+  public static void onPlayerDamage(EntityDamageByEntityEvent damageByEntityEvent) {
+    final Player damager = (Player) damageByEntityEvent.getDamager();
+    onDamage(damageByEntityEvent, damager);
+  }
+
+  private static void onDamage(EntityDamageByEntityEvent damageByEntityEvent, Player arrowShooter) {
+    final TTTPlayer arrowShooterTTTPlayer = TTTPlayer.determine(arrowShooter);
+    final Player target = (Player) damageByEntityEvent.getEntity();
+    final TTTPlayer targetTTTPlayer = TTTPlayer.determine(target);
+
+    if (arrowShooterTTTPlayer.getRole().equals(targetTTTPlayer.getRole()) ||
+        targetTTTPlayer.isSpectator()) {
+      damageByEntityEvent.setCancelled(true);
+    }
+  }
+
+  public static void onSpecatatorDamage(EntityDamageByEntityEvent damageByEntityEvent) {
+    damageByEntityEvent.setCancelled(true);
   }
 }

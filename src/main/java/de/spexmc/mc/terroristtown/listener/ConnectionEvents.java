@@ -12,6 +12,8 @@ import org.bukkit.event.player.PlayerLoginEvent;
 
 /**
  * Created by Lara on 11.08.2019 for SpexTTT
+ * @see org.bukkit.event.player.PlayerJoinEvent
+ * @see org.bukkit.event.player.PlayerLoginEvent
  */
 public class ConnectionEvents implements Listener {
   @EventHandler
